@@ -21,7 +21,7 @@ The components used were:
 9. Multiplexer
 10. Controller
 11. CPU
-
+12. Common Register
 ------
 
 
@@ -44,8 +44,16 @@ The last bit of the code input acts as a mode selection for ALU. Remaining 4 bit
 0100 - Mode 1, Arithmetic Unit for Shift Left
 
 0101 - Mode 1, Arithmetic Unit for Shift Right
-// Continue
 
+0111 - mode 0, Logic Unit for Comparision
+
+1000 - mode 0, Logic Unit for AND 
+
+1001 - mode 0, Logic Unit for OR
+
+1010 - mode 0, Logic Unit for XOR
+
+1011 - mode 0, Logic Unit for NOT
 ------
 
 ## Flow
