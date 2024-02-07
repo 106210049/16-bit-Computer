@@ -19,6 +19,7 @@ The components used were:
   9. Multiplexer
   10. Controller
   11. CPU
+
   12. 
 ------
 
