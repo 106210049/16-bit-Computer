@@ -1,10 +1,11 @@
 // Code your testbench here
 // or browse Examples
+import CPU_package::*;
 module RAM_tb;
   
-  parameter DATA_WIDTH=8;
-  parameter ADDRESS_WIDTH=4;
-  parameter ADDRESS_MAX_WIDTH=2<<ADDRESS_WIDTH;
+//   parameter DATA_WIDTH=8;
+//   parameter ADDRESS_WIDTH=4;
+//   parameter ADDRESS_MAX_WIDTH=2<<ADDRESS_WIDTH;
   
   reg Write_clock;
   reg [ADDRESS_WIDTH-1:0] write_address;
