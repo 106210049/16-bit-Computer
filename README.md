@@ -3,7 +3,7 @@ Design of a 16-Bit CPU using Verilog
 
 ----
 # Requirements
-<img src="CPU 16- Bit using Verilog/CPU.png" width="600" >  
+<img src="CPU.png" width="600" >  
 
 ---
 ## Approach
