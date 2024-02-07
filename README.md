@@ -1,5 +1,5 @@
-# 16-Bit-CPU-using-Verilog
-Design of a 16-Bit CPU using Verilog
+# N-Bit-CPU-using-Verilog
+Design of a N-Bit CPU using Verilog
 
 ----
 # Requirements
@@ -8,7 +8,7 @@ Design of a 16-Bit CPU using Verilog
 ---
 ## Approach
 
-To achieve a 16-Bit CPU design, we had to start by designing the individual components.
+To achieve a N-Bit CPU design, we had to start by designing the individual components.
 The components used were:
 
 1. ALU
@@ -27,11 +27,11 @@ The components used were:
 
 ## The Instruction Set
 
-The instruction set plays a very important role to determine the operation of the CPU. The Code input to the Instruction memory is 16-bit long. This is sent to the instruction register which takes the bits [15:12] as OPCODE and [11:0] as address to start with.
+The instruction set plays a very important role to determine the operation of the CPU. The Code input to the Instruction memory is N-bit long. This is sent to the instruction register which takes the bits [N-1:N-4] as OPCODE and [N-5:0] as address to start with.
 
 The instruction set are designed in a way to achieve all the necessary functions. Since the OPCODE controls the activity, the OPCODE is used as described below.
 
-The last bit of the code input acts as a mode selection for ALU. Remaining 4 are used for the ALU operation.
+The last bit of the code input acts as a mode selection for ALU. Remaining 4 bits are used for the ALU operation.
 
 0000 - Mode 1, Arithmetic Unit for ADD
 
