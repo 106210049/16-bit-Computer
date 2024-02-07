@@ -4,10 +4,10 @@ module Arith
 (
     input wire [DATA_WIDTH-1:0] 	in_a,
 	input wire [DATA_WIDTH-1:0] 	in_b,
-	input wire 						input_carry,
-	input  enum_alu_opcode_t 		alu_opcode,
+	input wire 			input_carry,
+	input  enum_alu_opcode_t 	alu_opcode,
   	output reg [DATA_WIDTH-1:0] 	arith_out,
-  	output reg [1:0] 				arith_out_flag 
+  	output reg [1:0] 		arith_out_flag 
 );
 
 initial begin
