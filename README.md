@@ -20,7 +20,7 @@ The components used were:
   10. Controller
   11. CPU
 
-  12. 
+
 ------
 
 ## The Instruction Set
