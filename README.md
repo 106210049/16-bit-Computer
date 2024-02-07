@@ -7,7 +7,6 @@ Design of a N-Bit CPU using Verilog
 
 ---
 ## Approach
-
 To achieve a N-Bit CPU design, we had to start by designing the individual components.
 The components used were:
 1. ALU
@@ -21,9 +20,7 @@ The components used were:
 10. Controller
 11. CPU
 12. Common Register
-
 ------
-
 
 ## The Instruction Set
 
