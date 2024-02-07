@@ -1,9 +1,11 @@
 // Code your design here
-module RAM #(
-  				parameter DATA_WIDTH=8,
-  				parameter ADDRESS_WIDTH=4,
-  				parameter ADDRESS_MAX_WIDTH=2<<ADDRESS_WIDTH
-)
+import CPU_package::*;
+module RAM 
+// #(
+//   				parameter DATA_WIDTH=8,
+//   				parameter ADDRESS_WIDTH=4,
+//   				parameter ADDRESS_MAX_WIDTH=2<<ADDRESS_WIDTH
+// )
 (
   input Write_clock,
   input [ADDRESS_WIDTH-1:0] write_address,
