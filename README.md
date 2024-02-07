@@ -15,10 +15,11 @@ The components used were:
   5. Data Memory
   6. Instruction memory
   7. Program Counter
-  8. Instruction Register 
+  8. Instruction Register + Common Register
   9. Multiplexer
   10. Controller
   11. CPU
+  12. 11
 
 
 ------
