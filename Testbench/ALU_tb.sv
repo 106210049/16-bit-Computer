@@ -6,20 +6,20 @@ module ALU_tb;
 import CPU_package::*;
   reg [DATA_WIDTH-1:0] 	in_a;
   reg [DATA_WIDTH-1:0] 	in_b;
-  reg					input_carry;
-  enum_alu_opcode_t 	alu_opcode;
-  reg 				    alu_mode;
+  reg					          input_carry;
+  enum_alu_opcode_t 	  alu_opcode;
+  reg 				          alu_mode;
   wire [DATA_WIDTH-1:0] alu_out;
-  struct_alu_flag_t 	alu_out_flag; 
+  struct_alu_flag_t 	  alu_out_flag; 
 
   ALU alu(
-    		.in_a(in_a),
+    		    .in_a(in_a),
             .in_b(in_b),
             .input_carry(input_carry),
             .alu_opcode(alu_opcode),
-    		.alu_mode(alu_mode),
-    		.alu_out(alu_out),
-    		.alu_out_flag(alu_out_flag)
+        		.alu_mode(alu_mode),
+        		.alu_out(alu_out),
+        		.alu_out_flag(alu_out_flag)
   );
   
   initial begin
