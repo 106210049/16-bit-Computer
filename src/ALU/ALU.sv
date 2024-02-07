@@ -4,7 +4,7 @@
     timeunit 1ps;
     timeprecision 1ps;
 `endif
-`include "CPU_package.sv"
+// `include "CPU_package.sv"
 `include "Arith_Unit.sv"
 `include "Logic_Unit.sv"
 import CPU_package::*;
