@@ -31,39 +31,20 @@ The instruction set plays a very important role to determine the operation of th
 
 The instruction set are designed in a way to achieve all the necessary functions. Since the OPCODE controls the activity, the OPCODE is used as described below.
 
-The last bit of the code input acts as a mode selection for ALU. Remaining 3 are used for the ALU operation.
+The last bit of the code input acts as a mode selection for ALU. Remaining 4 are used for the ALU operation.
 
-0000 - Mode 0, Arithmetic Unit for ADD
+0000 - Mode 1, Arithmetic Unit for ADD
 
-0001 - Mode 0, Arithmetic Unit for Multiply
+0001 - Mode 1, Arithmetic Unit for Subtract
 
-0010 - Mode 0, Arithmetic Unit for Subtract
+0010 - Mode 1, Arithmetic Unit for Increase
 
-0011 - Mode 0, Arithmetic Unit for Division
+0011 - Mode 1, Arithmetic Unit for Decrease
 
-0100 - Instruction set for Load A
+0100 - Mode 1, Arithmetic Unit for Shift Left
 
-0101 - Instruction set for Load B
-
-0110 - Instruction set for Load C
-
-0111 - Instruction set for jumping to immediate address
-
-1000 - Mode 1, Logical AND
-
-1001 - Mode 1, Logical OR
-
-1010 - Mode 1, Logical NAND
-
-1011 - Mode 1, Logical NOR
-
-1100 - Mode 1, Logical NOT A
-
-1101 - Mode 1, Logical NOT B
-
-1110 - Mode 1, Logical XOR
-
-1111 - Mode 1, Logical XNOR
+0101 - Mode 1, Arithmetic Unit for Shift Right
+// Continue
 
 ------
 
