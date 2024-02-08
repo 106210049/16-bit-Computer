@@ -4,10 +4,10 @@ module Arith
 (
     input wire [DATA_WIDTH-1:0] 	in_a,
 	input wire [DATA_WIDTH-1:0] 	in_b,
-	input wire 			input_carry,
-	input  enum_alu_opcode_t 	alu_opcode,
+	input wire 						input_carry,
+	input  enum_alu_opcode_t 		alu_opcode,
   	output reg [DATA_WIDTH-1:0] 	arith_out,
-  	output reg [1:0] 		arith_out_flag 
+  	output reg [1:0] 				arith_out_flag 
 );
 
 initial begin
@@ -22,6 +22,12 @@ always@(in_a,in_b,alu_opcode)	begin
 		ALU_OP_SUB: begin
           {arith_out_flag,arith_out}<=(DATA_WIDTH+1)'(in_a-in_b-input_carry);
 		end
+        ALU_OP_DIV: begin
+          {arith_out_flag,arith_out}<=in_a/in_b;
+        end
+        ALU_OP_MUL: begin
+          {arith_out_flag,arith_out}<=in_a*in_b;
+        end
         ALU_OP_INC: begin
           {arith_out_flag,arith_out}<=in_a+1;
         end
@@ -34,6 +40,6 @@ always@(in_a,in_b,alu_opcode)	begin
         ALU_OP_SHR: begin
           {arith_out_flag,arith_out} <= {input_carry, in_a};
         end
-	endcase
-    end
+        endcase
+	end
 endmodule: Arith
