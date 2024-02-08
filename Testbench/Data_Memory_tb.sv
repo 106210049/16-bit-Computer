@@ -1,7 +1,7 @@
 // Code your testbench here
 // or browse Examples
 import CPU_package::*;
-module RAM_tb;
+module Data_Memory_tb;
   
 //   parameter DATA_WIDTH=8;
 //   parameter ADDRESS_WIDTH=4;
@@ -17,7 +17,7 @@ module RAM_tb;
   reg Read_Enable;
   wire [DATA_WIDTH-1:0] DATA_READ; 
   
-  RAM #(DATA_WIDTH,ADDRESS_WIDTH,ADDRESS_MAX_WIDTH) ram(
+  Data_Memory #(DATA_WIDTH,ADDRESS_WIDTH,ADDRESS_MAX_WIDTH) data_memory(
     // Write memory
     .Write_clock(Write_clock),
     .write_address(write_address),
