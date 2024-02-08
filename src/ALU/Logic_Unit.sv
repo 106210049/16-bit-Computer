@@ -3,9 +3,9 @@ import CPU_package::*;
 module Logic( 
     input wire [DATA_WIDTH-1:0] 	in_a,
 	input wire [DATA_WIDTH-1:0] 	in_b,
-	input  enum_alu_opcode_t 	alu_opcode,
+	input  enum_alu_opcode_t 		alu_opcode,
   	output reg [DATA_WIDTH-1:0] 	logic_out,
-  	output reg [2:0]		logic_out_flag 
+  	output reg [2:0]				logic_out_flag 
 );
 
 initial begin
@@ -45,8 +45,11 @@ always@(in_a,in_b,alu_opcode)	begin
             ALU_OP_XOR: begin
              logic_out<=in_a^in_b;
             end
-            ALU_OP_NOT: begin
+            ALU_OP_NOTA: begin
               logic_out<=~in_a;
+            end
+          	ALU_OP_NOTB: begin
+              logic_out<=~in_b;
             end
         endcase
 	end
