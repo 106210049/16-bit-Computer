@@ -34,6 +34,6 @@ always@(in_a,in_b,alu_opcode)	begin
         ALU_OP_SHR: begin
           {arith_out_flag,arith_out} <= {input_carry, in_a};
         end
-        endcase
-	end
+	endcase
+    end
 endmodule: Arith
