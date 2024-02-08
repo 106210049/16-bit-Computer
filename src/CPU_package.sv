@@ -4,9 +4,12 @@ package CPU_package;
   localparam ADDRESS_MAX_WIDTH=2<<ADDRESS_WIDTH;
 
 // ALU
-typedef enum logic [3:0]{
+localparam ALU_OPCODE=4;
+typedef enum logic [ALU_OPCODE-1:0]{
       ALU_OP_ADD
     , ALU_OP_SUB
+  	, ALU_OP_DIV
+  	, ALU_OP_MUL
     , ALU_OP_INC
     , ALU_OP_DEC
     , ALU_OP_SHL
@@ -15,7 +18,8 @@ typedef enum logic [3:0]{
     , ALU_OP_AND
     , ALU_OP_OR
     , ALU_OP_XOR
-    , ALU_OP_NOT
+    , ALU_OP_NOTA
+  	, ALU_OP_NOTB
 }enum_alu_opcode_t;
 
 localparam ALU_FLAG_WIDTH = 5;
