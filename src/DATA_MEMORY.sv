@@ -1,7 +1,7 @@
 // Code your design here
 // `include"CPU_package.sv"
 import CPU_package::*;
-module RAM 
+module DATA_MEMORY 
 //   #(
 //   				parameter DATA_WIDTH=16,
 //   				parameter ADDRESS_WIDTH=8,
