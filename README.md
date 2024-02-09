@@ -1,5 +1,5 @@
 # N-Bit-CPU-using-Verilog
-Design of a N-Bit CPU using Verilog
+Design of a 16-Bit CPU using Verilog
 
 ----
 # Requirements
@@ -24,7 +24,7 @@ The components used were:
 
 ## The Instruction Set
 
-The instruction set plays a very important role to determine the operation of the CPU. The Code input to the Instruction memory is N-bit long. This is sent to the instruction register which takes the bits [N-1:N-4] as OPCODE and [N-5:0] as address to start with.
+The instruction set plays a very important role to determine the operation of the CPU. The Code input to the Instruction memory is 16-bit long. This is sent to the instruction register which takes the bits [15:12] as OPCODE and [11:0] as address to start with.
 
 The instruction set are designed in a way to achieve all the necessary functions. Since the OPCODE controls the activity, the OPCODE is used as described below.
 
