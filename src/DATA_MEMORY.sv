@@ -1,20 +1,14 @@
 // Code your design here
 // `include"CPU_package.sv"
 import CPU_package::*;
-module DATA_MEMORY 
-//   #(
-//   				parameter DATA_WIDTH=16,
-//   				parameter ADDRESS_WIDTH=8,
-//   				parameter ADDRESS_MAX_WIDTH=2<<ADDRESS_WIDTH
-// )
+module Data_Memory 
+
 (
   input Write_clock,
-  input [ADDRESS_WIDTH-1:0] write_address,
+  input [ADDRESS_WIDTH-1:0] DM_address,
   input wire Write_Enable,
   input [DATA_WIDTH-1:0] DATA_WRITE,
-
   input Read_clock,
-  input [ADDRESS_WIDTH-1:0] read_address,
   input wire Read_Enable,
   output reg [DATA_WIDTH-1:0] DATA_READ
 );
@@ -24,15 +18,13 @@ module DATA_MEMORY
   always@(posedge Write_clock)
     begin
       if(Write_Enable) begin
-        Memories[write_address]<=DATA_WRITE;
+        Memories[DM_address]<=DATA_WRITE;
       end
     end
   
   always@(posedge Read_clock)	begin
     if(Read_Enable)	begin
-      DATA_READ<=Memories[read_address];
+      DATA_READ<=Memories[DM_address];
     end
   end
 endmodule
-
-  
