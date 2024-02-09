@@ -8,24 +8,22 @@ module DATA_MEMORY_tb;
 //   parameter ADDRESS_MAX_WIDTH=2<<ADDRESS_WIDTH;
   
   reg Write_clock;
-  reg [ADDRESS_WIDTH-1:0] write_address;
+  reg [ADDRESS_WIDTH-1:0] DM_address;
   reg Write_Enable;
   reg [DATA_WIDTH-1:0] DATA_WRITE;
   
   reg Read_clock;
-  reg [ADDRESS_WIDTH-1:0] read_address;
   reg Read_Enable;
   wire [DATA_WIDTH-1:0] DATA_READ; 
   
   DATA_MEMORY #(DATA_WIDTH,ADDRESS_WIDTH,ADDRESS_MAX_WIDTH) data_memory(
     // Write memory
     .Write_clock(Write_clock),
-    .write_address(write_address),
+    .DM_address(DM_address),
     .Write_Enable(Write_Enable),
     .DATA_WRITE(DATA_WRITE),
   	// Read Memory
     .Read_clock(Read_clock),
-    .read_address(read_address),
     .Read_Enable(Read_Enable),
     .DATA_READ(DATA_READ)
   );
@@ -37,9 +35,8 @@ module DATA_MEMORY_tb;
   initial begin
     Write_clock=0;
     Write_Enable=0;
-    write_address=4'h9;
+    DM_address=4'h9;
     DATA_WRITE=0;
-    read_address=write_address;
     Read_clock=0;
     Read_Enable=0;
   end
@@ -48,7 +45,7 @@ module DATA_MEMORY_tb;
     $display("Read initial data.");
     toggle_clk_read;
     $display("data[%0h]: %0h",
-    read_address, DATA_READ);
+    DM_address, DATA_READ);
     #20
     $display("Write new data.");
     Write_Enable = 1;
@@ -60,12 +57,11 @@ module DATA_MEMORY_tb;
     Read_Enable=1;
     toggle_clk_read;
     $display("data[%0h]: %0h",
-    read_address, DATA_READ);
+    DM_address, DATA_READ);
     Read_Enable=0;
     #20
     
-    write_address=4'hf;
-    read_address=write_address;
+    DM_address=4'hf;
     $display("Write new data.");
     Write_Enable = 1;
     DATA_WRITE = 8'h9;
@@ -76,12 +72,11 @@ module DATA_MEMORY_tb;
     Read_Enable=1;
     toggle_clk_read;
     $display("data[%0h]: %0h",
-    read_address, DATA_READ);
+    DM_address, DATA_READ);
     Read_Enable=0;
     #20
     
-    write_address=4'h1;
-    read_address=write_address;
+    DM_address=4'h1;
     $display("Write new data.");
     Write_Enable = 1;
     DATA_WRITE = 8'hf;
@@ -92,7 +87,7 @@ module DATA_MEMORY_tb;
     Read_Enable=1;
     toggle_clk_read;
     $display("data[%0h]: %0h",
-    read_address, DATA_READ);
+    DM_address, DATA_READ);
     Read_Enable=0;
     #20
     $finish;
