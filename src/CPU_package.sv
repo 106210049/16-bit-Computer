@@ -1,6 +1,6 @@
 package CPU_package;
   localparam DATA_WIDTH=16;
-  localparam ADDRESS_WIDTH=16;
+  localparam ADDRESS_WIDTH=10;
   localparam ADDRESS_MAX_WIDTH=2<<ADDRESS_WIDTH;
 
 // ALU
